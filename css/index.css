@@ -257,10 +257,76 @@ textarea {
   padding-right: 1rem;
   margin-bottom: 1rem;
 }
-.confianza ol{
+.confianza ol {
   border: 0.25rem solid black;
   border-radius: 0.5rem;
   margin: 1rem;
   padding: 1rem;
   list-style-image: url(https://www.svgrepo.com/show/97493/motorcycle.svg);
+}
+table {
+  width: 80%;
+  margin: 1rem auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 0.25rem solid black;
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background-color: rgba(255, 68, 0, 0.75);
+  font-weight: bold;
+}
+
+.section-title {
+  background-color: rgba(255, 68, 0, 0.75);
+  font-weight: bold;
+}
+.motos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.motos iframe {
+  border: 0.25rem solid black;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.consejo .container {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 0, 0.507),
+    rgba(255, 68, 0, 0.75)
+  );
+  display: flex;
+  align-items: stretch;
+  margin: 1rem;
+  border: 0.25rem solid black;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+.consejo h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container ol {
+  list-style-type: decimal;
+  font-size: 18px;
+}
+
+.container li {
+  margin-bottom: 15px;
+}
+
+.emoji {
+  font-size: 24px;
+  margin-right: 8px;
 }
