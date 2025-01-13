@@ -62,59 +62,145 @@ a {
   color: black;
   font-weight: bold;
 }
-main {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-}
-.motivos {
-  border: 0.25rem, solid, black;
-  border-radius: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  background-color: rgba(255, 68, 0, 0.75);
-  margin: 1rem;
+.consejo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
-.motivos h1 {
-  text-align: center;
-  margin: 1rem;
-}
-.motivos p {
-  text-align: center;
-  margin: 0.5rem;
-}
-.motivos img {
-  width: 20rem;
-  border-radius: 1rem;
-  margin: 1rem;
-}
-.motivos audio {
-  padding: 1rem;
-}
-.container {
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
+form {
   justify-content: center;
-  align-items: center;
+  font-size: 14px;
+  color: black;
+  border: 0.25rem solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: grey;
+  margin: 1rem;
 }
-#moto-svg {
-  width: 200px;
-  animation: move 4s linear infinite;
+fieldset {
+  border: 0.25rem solid black;
+  border-radius: 1rem;
+  margin-bottom: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-@keyframes move {
-  0% {
-    transform: translateX(-200px);
-  }
-  100% {
-    transform: translateX(100vw);
-  }
+legend {
+  color: black;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+input {
+  background-color: white;
+  border-radius: 4px;
+  color: black;
+  font-size: 16px;
+  padding-top: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+}
+input:focus {
+  outline: none;
+}
+input[type="submit"] {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: rgba(255, 68, 0, 0.85);
+  background-color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+input[type="submit"]:hover {
+  background-color: rgba(255, 68, 0, 0.75);
+  color: black;
+}
+input:required {
+  box-shadow: 0px 0px 0px red;
+}
+input:invalid {
+  box-shadow: 0px 0px 6px red;
+}
+fieldset:invalid {
+  box-shadow: 0px 0px 6px red;
+}
+form:invalid {
+  box-shadow: 0px 0px 6px red;
+}
+form:valid {
+  box-shadow: 0px 0px 6px green;
+}
+textarea {
+  width: 450px;
+  height: 50px;
+  max-width: 493px;
+  min-width: 300px;
+  max-height: 200px;
+  min-height: 50px;
+  margin-top: 3px;
+  border-radius: 4px;
+  color: black;
+  font-size: 16px;
+  padding-top: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+}
+.euros::placeholder {
+  color: rgba(255, 0, 0, 0.5);
+}
+.confianza {
+  border: 0.25rem solid black;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 68, 0, 0.75);
+  color: black;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+}
+.confianza ol {
+  border: 0.25rem solid black;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  list-style-image: url(https://www.svgrepo.com/show/97493/motorcycle.svg);
+}
+.consejo .container {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 0, 0.507),
+    rgba(255, 68, 0, 0.75)
+  );
+  display: flex;
+  align-items: stretch;
+  margin: 1rem;
+  border: 0.25rem solid black;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+.consejo h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container ol {
+  list-style-type: decimal;
+  font-size: 18px;
+}
+
+.container li {
+  margin-bottom: 15px;
+}
+
+.emoji {
+  font-size: 24px;
+  margin-right: 8px;
 }
 footer {
   border: 0.25rem, solid, black;
@@ -126,6 +212,9 @@ footer {
   justify-content: space-between;
   align-items: flex-end;
   width: stretch;
+}
+.footer2 {
+  margin-top: 2rem;
 }
 footer img {
   width: 30%;
@@ -207,18 +296,6 @@ footer a img {
     padding: 10px;
   }
 
-  main {
-    flex-direction: column;
-  }
-
-  .motivos {
-    padding: 1rem;
-  }
-
-  .motivos img {
-    width: 100%;
-  }
-
   footer {
     flex-direction: column;
     align-items: center;
@@ -239,17 +316,23 @@ footer a img {
   .copy {
     text-align: center;
   }
+  textarea {
+    width: 90%;
+    min-width: 90%;
+  }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   nav ul {
     font-size: 18px;
   }
-  .motivos img {
-    width: 18rem;
+  textarea {
+    width: 90%;
+    min-width: 90%;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .motivos img {
-    width: 16rem;
+  textarea {
+    width: 400px;
+    min-width: 300px;
   }
 }

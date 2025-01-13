@@ -62,59 +62,48 @@ a {
   color: black;
   font-weight: bold;
 }
-main {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-}
-.motivos {
+.stick {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 68, 0, 0.75);
   border: 0.25rem, solid, black;
   border-radius: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  color: black;
+  padding: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+table {
+  width: 80%;
+  margin: 1rem auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 0.25rem solid black;
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
   background-color: rgba(255, 68, 0, 0.75);
-  margin: 1rem;
+  font-weight: bold;
+}
+
+.section-title {
+  background-color: rgba(255, 68, 0, 0.75);
+  font-weight: bold;
+}
+.motos {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
-.motivos h1 {
-  text-align: center;
+.motos iframe {
+  border: 0.25rem solid black;
+  border-radius: 0.5rem;
   margin: 1rem;
-}
-.motivos p {
-  text-align: center;
-  margin: 0.5rem;
-}
-.motivos img {
-  width: 20rem;
-  border-radius: 1rem;
-  margin: 1rem;
-}
-.motivos audio {
-  padding: 1rem;
-}
-.container {
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#moto-svg {
-  width: 200px;
-  animation: move 4s linear infinite;
-}
-@keyframes move {
-  0% {
-    transform: translateX(-200px);
-  }
-  100% {
-    transform: translateX(100vw);
-  }
 }
 footer {
   border: 0.25rem, solid, black;
@@ -206,17 +195,11 @@ footer a img {
   nav ul li:hover {
     padding: 10px;
   }
-
-  main {
-    flex-direction: column;
-  }
-
-  .motivos {
-    padding: 1rem;
-  }
-
-  .motivos img {
+  table {
     width: 100%;
+  }
+  .motos iframe {
+    width: 90%;
   }
 
   footer {
@@ -244,12 +227,18 @@ footer a img {
   nav ul {
     font-size: 18px;
   }
-  .motivos img {
-    width: 18rem;
+  table {
+    width: 95%;
+  }
+  .motos iframe {
+    width: 90%;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .motivos img {
-    width: 16rem;
+  table {
+    width: 90%;
+  }
+  .motos iframe {
+    width: 85%;
   }
 }
